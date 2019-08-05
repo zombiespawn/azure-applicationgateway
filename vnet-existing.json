@@ -93,7 +93,7 @@
   },
   "variables": {
     "location": "[resourceGroup().location]",
-    "rgname": "/subscriptions/a464f508-ff11-423c-bab6-8eadb42ebcf2/resourceGroups/RG_FW_PALOALTO",
+    "rgname": "/subscriptions/a464f508-ff11-423c-bab6-8eadb42ebcf2/resourceGroups/RG_VNET_PROD",
   },
   "resources": [
   ],
