@@ -4,7 +4,7 @@
   "parameters": {
     "networkSecurityGroupName": {
       "type": "string",
-      "defaultValue": "nsg-mgmt",
+      "defaultValue": "fw-mgmt-nsg",
       "metadata": {
         "description": "Network Security Group Name"
       }
@@ -18,14 +18,14 @@
     },
     "virtualNetworkName": {
       "type": "string",
-      "defaultValue": "vnet-FW",
+      "defaultValue": "VNET_WE_PROD",
       "metadata": {
         "description": "Virtual Network Name"
       }
     },
     "virtualNetworkNewOrExisting": {
             "type": "string",
-            "defaultValue": "new",
+            "defaultValue": "existing",
             "allowedValues": [
                 "new",
                 "existing"
@@ -36,97 +36,98 @@
     },
     "virtualNetworkAddressPrefix": {
       "type": "string",
-      "defaultValue": "192.168.0.0/16",
+      "defaultValue": "10.255.184.0/21",
       "metadata": {
         "description": "CIDR for Virtual Network"
       }
     },
     "MgmtSubnetName": {
       "type": "string",
-      "defaultValue": "Mgmt",
+      "defaultValue": "mgmt-tier-prod",
       "metadata": {
         "description": "Subnet for Management Network"
       }
     },
     "mgmtSubnetPrefix": {
       "type": "string",
-      "defaultValue": "192.168.0.0/24",
+      "defaultValue": "10.255.191.48/28",
       "metadata": {
         "description": "CIDR for Management Network"
       }
     },
     "untrustedSubnetName": {
       "type": "string",
-      "defaultValue": "Untrust",
+      "defaultValue": "untrusted-tier-prod",
       "metadata": {
         "description": "Subnet for Untrusted Network"
       }
     },
     "untrustedSubnetPrefix": {
       "type": "string",
-      "defaultValue": "192.168.1.0/24",
+      "defaultValue": "10.255.191.16/28",
       "metadata": {
         "description": "CIDR for Untrusted Network"
       }
     },
     "trustedSubnetName": {
       "type": "string",
-      "defaultValue": "Trust",
+      "defaultValue": "trusted-tier-prod",
       "metadata": {
         "description": "Subnet for Trusted Network"
       }
     },
     "trustedSubnetPrefix": {
       "type": "string",
-      "defaultValue": "192.168.2.0/24",
+      "defaultValue": "0.255.191.32/28",
       "metadata": {
         "description": "CIDR for Trusted Network"
       }
     },
     "appGatewayName": {
       "type": "string",
-      "defaultValue": "myAppGw",
+      "defaultValue": "fwwe-app-gw-prod",
       "metadata": {
         "description": "App Gateway name - used to identify resource in Azure portal"
       }
     },
     "appGatewayDnsName": {
       "type": "string",
+      "defaultValue": "fwwe-app-gw-prod",
       "metadata": {
         "description": "App Gateway Public IP DNS Name. Must be globally unique."
       }
     },
     "appGatewaySubnetName": {
       "type": "string",
-      "defaultValue": "AppGWSubnet",
+      "defaultValue": "appgw-tier-prod",
       "metadata": {
         "description": "Subnet for App Gateway"
       }
     },
     "appGatewaySubnetPrefix": {
       "type": "string",
-      "defaultValue": "192.168.3.0/24",
+      "defaultValue": "0.255.191.64/27",
       "metadata": {
         "description": "CIDR for App Gateway"
       }
     },
     "internalLoadBalancerName": {
       "type": "string",
-      "defaultValue": "myPrivateLB",
+      "defaultValue": "fwwelb-prod",
       "metadata": {
         "description": "Internal Load Balancer name - used to identify resource in Azure portal"
       }
     },
     "backendSubnetName": {
       "type": "string",
-      "defaultValue": "backendSubnet",
+      "defaultValue": "app-tier-prod",
       "metadata": {
         "description": "Subnet for Backend WWW Network"
       }
     },
     "backendSubnetPrefix": {
       "type": "string",
-      "defaultValue": "192.168.4.0/24",
+      "defaultValue": "110.255.188.0/24",
       "metadata": {
         "description": "CIDR for Backend WWW Network"
       }
@@ -160,7 +161,7 @@
        "metadata": {
           "description": "Name prefix of VM-Series VM in the Azure portal"
        },  
-       "defaultValue": "VM-Series"
+       "defaultValue": "fwwe-prod"
     },
     "firewallVmSize": {
        "type": "string",
@@ -192,7 +193,7 @@
     },
     "storageAccountNewOrExisting" : {
        "type": "string",
-       "defaultValue" : "new",
+       "defaultValue" : "existing",
        "allowedValues" : [
           "new",
           "existing"
