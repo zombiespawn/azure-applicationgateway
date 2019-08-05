@@ -59,7 +59,7 @@
     },
     "virtualNetworkExistingRGName": {
       "type": "string",
-      "defaultValue": "",
+      "defaultValue": "RG_VNET_PROD",
       "metadata": {
         "description": "Name of resource group of VNET (new or existing)"
       }
@@ -223,7 +223,7 @@
   },
   "variables": {
     "availabilitySetName": "[concat('firewallAvSet', substring(uniqueString(resourceGroup().id), 0, 4))]",
-    "rgname": "[resourceGroup().id]",
+    "rgname": "/subscriptions/a464f508-ff11-423c-bab6-8eadb42ebcf2/resourceGroups/RG_FW_PALOALTO",
     "imagePublisher": "paloaltonetworks",
     "imageOffer" : "vmseries1",
     "version" : "latest",
